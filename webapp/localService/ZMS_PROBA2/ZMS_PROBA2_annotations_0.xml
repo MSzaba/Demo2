@@ -1,0 +1,64 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/></edmx:Reference>
+	<edmx:Reference Uri="../../../sap/zms_proba2_srv/$metadata"><edmx:Include Namespace="ZMS_PROBA2_SRV" Alias="SAP"/></edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="zms_proba2_anno_mdl.v1">
+			<Annotations Target="ZMS_PROBA2_SRV.ZMS_PROBA2Type">
+				<Annotation Term="UI.DataPoint" Qualifier="descr">
+					<Record><PropertyValue Property="Value" Path="descr"/><PropertyValue Property="Title" String="DESCR SZM"/></Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="langu">
+					<Record><PropertyValue Property="Value" Path="langu"/><PropertyValue Property="Title" String="Language SZM"/></Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="name">
+					<Record><PropertyValue Property="Value" Path="name"/><PropertyValue Property="Title" String="NAME SZM"/></Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="tpid">
+					<Record><PropertyValue Property="Value" Path="tpid"/><PropertyValue Property="Title" String="TPID SZM"/></Record>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="SOME_DATA3"/><PropertyValue Property="TypeNamePlural" String="SOME_DATA3PL"/>
+						<PropertyValue Property="Title">
+							<Record Type="UI.DataField">
+								<PropertyValue Property="Value" String="">
+									<Annotation Term="Core.Messages">
+										<Collection>
+											<Record><PropertyValue Property="code" String="SADL_GW_EXP_VOCAN-001"/><PropertyValue Property="message" String="Property 'Name' of annotation 'UI.HEADERINFO.TITLE' in proj./view 'ZMS_PROBA2' not found"/><PropertyValue Property="severity" String="error"/></Record>
+										</Collection>
+									</Annotation>
+								</PropertyValue>
+							</Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="descr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="langu"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="tpid"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="name"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="descr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="langu"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="tpid"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="name"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

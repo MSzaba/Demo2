@@ -1,0 +1,87 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/></edmx:Reference>
+	<edmx:Reference Uri="../../../sap/zms_c_dm_act_planning_area3_srv/$metadata"><edmx:Include Namespace="ZMS_C_DM_ACT_PLANNING_AREA3_SRV" Alias="SAP"/></edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="zms_c_dm_act_plannin_anno_mdl_01.v1">
+			<Annotations Target="ZMS_C_DM_ACT_PLANNING_AREA3_SRV.ZMS_C_DM_ACT_PLANNING_AREAType">
+				<Annotation Term="UI.DataPoint" Qualifier="active">
+					<Record><PropertyValue Property="Value" Path="active"/><PropertyValue Property="Title" String="Active SzM6"/></Record>
+				</Annotation>
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.CollectionFacet"><PropertyValue Property="Label" String="General Information SzM6"/><PropertyValue Property="ID" String="CF_GI"/>
+							<PropertyValue Property="Facets">
+								<Collection>
+									<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Admin Data SzM"/><PropertyValue Property="ID" String="CF_AdminData"/><PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#QAdminData"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+									<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="General Info SzM"/><PropertyValue Property="ID" String="CF_GenaralInfo"/><PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#QGeneralInfo"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								</Collection>
+							</PropertyValue><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="QAdminData">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="lastmodifiedby"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="lastmodifieddate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="activatedby"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="lastactivateddate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="QGeneralInfo">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="plarea"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="active"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+								<Record Type="UI.DataField"><PropertyValue Property="Value" Path="tpid"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="Planning Area4"/><PropertyValue Property="TypeNamePlural" String="Planning Areas4"/>
+						<PropertyValue Property="Title">
+							<Record Type="UI.DataField"><PropertyValue Property="IconUrl" String="http://http://clipartmag.com/images/spiderman-face-images-8.jpg"/><PropertyValue Property="Value" Path="plarea"/></Record>
+						</PropertyValue>
+						<PropertyValue Property="Description">
+							<Record Type="UI.DataField"><PropertyValue Property="IconUrl" String="http://http://clipartmag.com/images/spiderman-face-images-8.jpg"/></Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="active"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="tpid"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="plarea"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Planning area SzM6"/><PropertyValue Property="Value" Path="plarea"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Time profile id SzM6_2"/><PropertyValue Property="Value" Path="tpid"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="active"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.SelectionFields">
+					<Collection>
+						<PropertyPath>plarea</PropertyPath>
+					</Collection>
+				</Annotation>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

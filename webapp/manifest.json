@@ -1,0 +1,367 @@
+{
+	"_version": "1.7.0",
+	"start_url": "start.html",
+	"sap.app": {
+		"id": "${project.artifactId}",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "${project.version}"
+		},
+		"title": "{{app_title}}",
+		"description": "{{app_description}}",
+		"ach": "tst",
+		"resources": "resources.json",
+		"dataSources": {
+			"ZMS_C_DM_ACT_PLANNING_AREA3_SRV": {
+				"uri": "/sap/opu/odata/sap/ZMS_C_DM_ACT_PLANNING_AREA3_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"annotations": [
+						"ZMS_C_DM_ACT_PLANNIN_ANNO_MDL_01"
+					],
+					"localUri": "localService/ZMS_C_DM_ACT_PLANNING_AREA3_SRV/metadata.xml"
+				}
+			},
+			"ZMS_C_DM_ACT_PLANNIN_ANNO_MDL_01": {
+				"uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZMS_C_DM_ACT_PLANNIN_ANNO_MDL_01',Version='0001')/$value/",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "localService/ZMS_C_DM_ACT_PLANNING_AREA3_SRV/ZMS_C_DM_ACT_PLANNIN_ANNO_MDL_01.xml"
+				}
+			},
+			"ZMS_PROBA2": {
+				"uri": "/sap/opu/odata/sap/ZMS_PROBA2_SRV/",
+				"type": "OData",
+				"settings": {
+					"annotations": [
+						"ZMS_PROBA2Anno0"
+					],
+					"localUri": "localService/ZMS_PROBA2/metadata.xml"
+				}
+			},
+			"ZMS_PROBA2Anno0": {
+				"uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZMS_PROBA2_ANNO_MDL',Version='0001')/$value/",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "localService/ZMS_PROBA2/ZMS_PROBA2_annotations_0.xml"
+				}
+			},
+			"ZMS_ATTRIBUTE_COUNT": {
+				"uri": "/sap/opu/odata/sap/ZMS_ATTRIBUTE_COUNT_SRV/",
+				"type": "OData",
+				"settings": {
+					"annotations": [
+						"ZMS_ATTRIBUTE_COUNTAnno0"
+					],
+					"localUri": "localService/ZMS_ATTRIBUTE_COUNT/metadata.xml"
+				}
+			},
+			"ZMS_ATTRIBUTE_COUNTAnno0": {
+				"uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZMS_ATTRIBUTE_COUNT_ANNO_MDL',Version='0001')/$value/",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "localService/ZMS_ATTRIBUTE_COUNT/ZMS_ATTRIBUTE_COUNT_annotations_0.xml"
+				}
+			},
+			"ZMS_MADATYPE_COUNT": {
+				"uri": "/sap/opu/odata/sap/ZMS_MADATYPE_COUNT_SRV/",
+				"type": "OData",
+				"settings": {
+					"annotations": [
+						"ZMS_MADATYPE_COUNTAnno0"
+					],
+					"localUri": "localService/ZMS_MADATYPE_COUNT/metadata.xml"
+				}
+			},
+			"ZMS_MADATYPE_COUNTAnno0": {
+				"uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZMS_MADATYPE_COUNT_ANNO_MDL',Version='0001')/$value/",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "localService/ZMS_MADATYPE_COUNT/ZMS_MADATYPE_COUNT_annotations_0.xml"
+				}
+			},
+			"ZMS_PLANNING_LEVEL": {
+				"uri": "/sap/opu/odata/sap/ZMS_PLANNING_LEVEL_SRV/",
+				"type": "OData",
+				"settings": {
+					"annotations": [
+						"ZMS_PLANNING_LEVELAnno0"
+					],
+					"localUri": "localService/ZMS_PLANNING_LEVEL/metadata.xml"
+				}
+			},
+			"ZMS_PLANNING_LEVELAnno0": {
+				"uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZMS_PLANNING_LEVEL_ANNO_MDL',Version='0001')/$value/",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "localService/ZMS_PLANNING_LEVEL/ZMS_PLANNING_LEVEL_annotations_0.xml"
+				}
+			},
+			"ZMS_KEY_FIGURE_COUNT": {
+				"uri": "/sap/opu/odata/sap/ZMS_KEY_FIGURE_COUNT_SRV/",
+				"type": "OData",
+				"settings": {
+					"annotations": [
+						"ZMS_KEY_FIGURE_COUNTAnno0"
+					],
+					"localUri": "localService/ZMS_KEY_FIGURE_COUNT/metadata.xml"
+				}
+			},
+			"ZMS_KEY_FIGURE_COUNTAnno0": {
+				"uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZMS_KEY_FIGURE_COUNT_ANNO_MDL',Version='0001')/$value/",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "localService/ZMS_KEY_FIGURE_COUNT/ZMS_KEY_FIGURE_COUNT_annotations_0.xml"
+				}
+			},
+			"ZMS_TIME_PROFILE_IN_PA": {
+				"uri": "/sap/opu/odata/sap/ZMS_TIME_PROFILE_IN_PA_SRV/",
+				"type": "OData",
+				"settings": {
+					"annotations": [
+						"ZMS_TIME_PROFILE_IN_PAAnno0"
+					],
+					"localUri": "localService/ZMS_TIME_PROFILE_IN_PA/metadata.xml"
+				}
+			},
+			"ZMS_TIME_PROFILE_IN_PAAnno0": {
+				"uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZMS_TIME_PROFILE_IN_PA_ANNO_MDL',Version='0001')/$value/",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "localService/ZMS_TIME_PROFILE_IN_PA/ZMS_TIME_PROFILE_IN_PA_annotations_0.xml"
+				}
+			},
+			"ZMS_TIME_PROFILE_IN_PA2": {
+				"uri": "/sap/opu/odata/sap/ZMS_TIME_PROFILE_IN_PA_SRV/",
+				"type": "OData",
+				"settings": {
+					"annotations": [
+						"ZMS_TIME_PROFILE_IN_PA2Anno0"
+					],
+					"localUri": "localService/ZMS_TIME_PROFILE_IN_PA2/metadata.xml"
+				}
+			},
+			"ZMS_TIME_PROFILE_IN_PA2Anno0": {
+				"uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZMS_TIME_PROFILE_IN_PA_ANNO_MDL',Version='0001')/$value/",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "localService/ZMS_TIME_PROFILE_IN_PA2/ZMS_TIME_PROFILE_IN_PA2_annotations_0.xml"
+				}
+			}
+		},
+		"sourceTemplate": {
+			"id": "OVP.cardtemplate",
+			"version": "0.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.ovp": {}
+			}
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			},
+			"@i18n": {
+				"preload": true,
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			},
+			"ZMS_C_DM_ACT_PLANNING_AREA3_SRV": {
+				"dataSource": "ZMS_C_DM_ACT_PLANNING_AREA3_SRV",
+				"settings": {
+					"defaultCountMode": "Inline"
+				}
+			},
+			"ZMS_PROBA2": {
+				"dataSource": "ZMS_PROBA2",
+				"settings": {
+					"defaultCountMode": "Inline"
+				}
+			},
+			"ZMS_ATTRIBUTE_COUNT": {
+				"dataSource": "ZMS_ATTRIBUTE_COUNT",
+				"settings": {
+					"defaultCountMode": "Inline"
+				}
+			},
+			"ZMS_MADATYPE_COUNT": {
+				"dataSource": "ZMS_MADATYPE_COUNT",
+				"settings": {
+					"defaultCountMode": "Inline"
+				}
+			},
+			"ZMS_PLANNING_LEVEL": {
+				"dataSource": "ZMS_PLANNING_LEVEL",
+				"settings": {
+					"defaultCountMode": "Inline"
+				}
+			},
+			"ZMS_KEY_FIGURE_COUNT": {
+				"dataSource": "ZMS_KEY_FIGURE_COUNT",
+				"settings": {
+					"defaultCountMode": "Inline"
+				}
+			}
+		},
+		"extends": {
+			"extensions": {}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		}
+	},
+	"sap.fiori": {
+		"registrationIds": [],
+		"archeType": "analytical"
+	},
+	"sap.ovp": {
+		"globalFilterModel": "ZMS_C_DM_ACT_PLANNING_AREA3_SRV",
+		"globalFilterEntityType": "ZMS_C_DM_ACT_PLANNING_AREAType",
+		"containerLayout": "resizable",
+		"enableLiveFilter": true,
+		"considerAnalyticalParameters": false,
+		"cards": {
+			"card00": {
+				"model": "ZMS_C_DM_ACT_PLANNING_AREA3_SRV",
+				"template": "sap.ovp.cards.table",
+				"settings": {
+					"title": "{{card00_title}}",
+					"subTitle": "{{card00_subTitle}}",
+					"entitySet": "ZMS_C_DM_ACT_PLANNING_AREA",
+					"sortBy": "plarea",
+					"sortOrder": "ascending",
+					"addODataSelect": false,
+					"identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
+					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
+					"defaultSpan": {
+						"rows": 7,
+						"cols": 3
+					}
+				}
+			},
+			"card01": {
+				"model": "ZMS_PROBA2",
+				"template": "sap.ovp.cards.list",
+				"settings": {
+					"title": "{{card01_title}}",
+					"subTitle": "{{card01_subTitle}}",
+					"entitySet": "ZMS_PROBA2",
+					"listType": "extended",
+					"listFlavor": "standard",
+					"sortBy": "tpid",
+					"addODataSelect": false,
+					"identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
+					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
+					"defaultSpan": {
+						"rows": 7,
+						"cols": 3
+					}
+				}
+			},
+			"card02": {
+				"model": "ZMS_ATTRIBUTE_COUNT",
+				"template": "sap.ovp.cards.table",
+				"settings": {
+					"title": "{{card02_title}}",
+					"subTitle": "{{card02_subTitle}}",
+					"entitySet": "ZMS_ATTRIBUTE_COUNT",
+					"listFlavor": "bar",
+					"sortBy": "attr_count",
+					"addODataSelect": false,
+					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
+					"defaultSpan": {
+						"rows": 7,
+						"cols": 3
+					}
+				}
+			},
+			"card03": {
+				"model": "ZMS_MADATYPE_COUNT",
+				"template": "sap.ovp.cards.table",
+				"settings": {
+					"title": "{{card03_title}}",
+					"subTitle": "{{card03_subTitle}}",
+					"entitySet": "ZMS_MADATYPE_COUNT",
+					"sortBy": "type",
+					"sortOrder": "descending",
+					"addODataSelect": false,
+					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
+					"defaultSpan": {
+						"rows": 7,
+						"cols": 3
+					}
+				}
+			},
+			"card04": {
+				"model": "ZMS_PLANNING_LEVEL",
+				"template": "sap.ovp.cards.table",
+				"settings": {
+					"title": "{{card04_title}}",
+					"subTitle": "{{card04_subTitle}}",
+					"entitySet": "ZMS_PLANNING_LEVEL",
+					"sortBy": "plevel",
+					"sortOrder": "ascending",
+					"addODataSelect": false,
+					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
+					"defaultSpan": {
+						"rows": 7,
+						"cols": 3
+					}
+				}
+			},
+			"card05": {
+				"model": "ZMS_KEY_FIGURE_COUNT",
+				"template": "sap.ovp.cards.table",
+				"settings": {
+					"title": "{{card05_title}}",
+					"subTitle": "{{card05_subTitle}}",
+					"entitySet": "ZMS_KEY_FIGURE_COUNT",
+					"sortBy": "plarea",
+					"sortOrder": "ascending",
+					"addODataSelect": false,
+					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
+					"defaultSpan": {
+						"rows": 7,
+						"cols": 2
+					}
+				}
+			},
+			"card06": {
+				"model": "ZMS_KEY_FIGURE_COUNT",
+				"template": "sap.ovp.cards.table",
+				"settings": {
+					"title": "{{card05_title}}",
+					"subTitle": "{{card05_subTitle}}",
+					"entitySet": "ZMS_KEY_FIGURE_COUNT",
+					"sortBy": "plarea",
+					"sortOrder": "ascending",
+					"addODataSelect": false,
+					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
+					"defaultSpan": {
+						"rows": 7,
+						"cols": 2
+					}
+				}
+			}
+		}
+	}
+}

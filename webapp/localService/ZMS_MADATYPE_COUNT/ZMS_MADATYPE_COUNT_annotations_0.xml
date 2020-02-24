@@ -1,0 +1,33 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/></edmx:Reference>
+	<edmx:Reference Uri="../../../sap/zms_madatype_count_srv/$metadata"><edmx:Include Namespace="ZMS_MADATYPE_COUNT_SRV" Alias="SAP"/></edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="zms_madatype_count_anno_mdl.v1">
+			<Annotations Target="ZMS_MADATYPE_COUNT_SRV.ZMS_MADATYPE_COUNTType">
+				<Annotation Term="UI.DataPoint" Qualifier="obj_type_count">
+					<Record><PropertyValue Property="Value" Path="obj_type_count"/><PropertyValue Property="Title" String="Count 1"/></Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="type">
+					<Record><PropertyValue Property="Value" Path="type"/><PropertyValue Property="Title" String="Type 1"/></Record>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Type 2"/><PropertyValue Property="Value" Path="type"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Count 2"/><PropertyValue Property="Value" Path="obj_type_count"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

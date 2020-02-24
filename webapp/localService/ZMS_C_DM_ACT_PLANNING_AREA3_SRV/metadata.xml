@@ -1,0 +1,48 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/></edmx:Reference>
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/></edmx:Reference>
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/></edmx:Reference>
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="Aggregation"/></edmx:Reference>
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/></edmx:Reference>
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/></edmx:Reference>
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/></edmx:Reference>
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="Org.OData.Measures.V1" Alias="Measures"/></edmx:Reference>
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZMS_C_DM_ACT_PLANNING_AREA3_SRV" xml:lang="en"
+			sap:schema-version="1">
+			<EntityType Name="ZMS_C_DM_ACT_PLANNING_AREAType" sap:label="copy of C_DM_ACT_PLANNING_AREA" sap:content-version="1">
+				<Key><PropertyRef Name="plarea"/><PropertyRef Name="active"/></Key><Property Name="plarea" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Planning Area"/><Property Name="active" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Active"/><Property Name="tpid" Type="Edm.String" MaxLength="32" sap:label="Time profile id SzM6_1"/><Property Name="tsstoragetplevel" Type="Edm.Int32" sap:label="Time Profile Level" sap:quickinfo="Data Model: Storage Time Profile Level"/><Property Name="scmdefaultalg" Type="Edm.Byte" sap:label="SCM Def. Algorithm"
+					sap:quickinfo="Data Model: Planning Area SCM Default Algorithm Flag"/><Property Name="histenabled" Type="Edm.Byte" sap:label="History Enabled" sap:quickinfo="Data Model: Planning Area History Enabled"/><Property Name="histcalcenabled" Type="Edm.Byte" sap:label="Hist. Based Calc. En"
+					sap:quickinfo="Data Model: Planning Area change history based calc. enabled"/><Property Name="histmdenabled" Type="Edm.Byte" sap:label="History Enabled"
+					sap:quickinfo="Data Model: Planning Area Master Data History Enabled"/><Property Name="obp_int_prf_id" Type="Edm.String" MaxLength="18" sap:display-format="UpperCase" sap:label="Integration Profile"
+					sap:quickinfo="Integration Profile ID"/><Property Name="int_prf_descr" Type="Edm.String" MaxLength="50" sap:label="Iternal profile description SzM2"/><Property Name="ext_src_enabled" Type="Edm.String" MaxLength="1" sap:label="Flag"/><Property Name="planoffset" Type="Edm.Int32" sap:label="TBD" sap:quickinfo="Data Model: Planning Offset in Planning Area"/><Property Name="createdby" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Created By SzM"
+					sap:quickinfo="what the hell??"/><Property Name="createdbyfullname" Type="Edm.String" MaxLength="80"/><Property Name="createddate" Type="Edm.DateTimeOffset" Precision="0" sap:label="Created At"/><Property Name="lastmodifiedby" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Changed By"/><Property Name="lastmodifiedbyfullname" Type="Edm.String" MaxLength="80"/><Property Name="lastmodifieddate" Type="Edm.DateTimeOffset" Precision="0" sap:label="Changed At"/><Property Name="activatedby" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="TBD"
+					sap:quickinfo="Data Model: Activated By"/><Property Name="activatedbyfullname" Type="Edm.String" MaxLength="80"/><Property Name="lastactivateddate" Type="Edm.DateTimeOffset" Precision="0" sap:label="TBD" sap:quickinfo="Data Model: End of Activation"/><Property Name="activation_log_handle" Type="Edm.String" MaxLength="32" sap:display-format="UpperCase" sap:label="Log Handle"/><Property Name="last_action" Type="Edm.String" MaxLength="7" sap:display-format="UpperCase" sap:label="Last Action"
+					sap:quickinfo="Data Model: Last Action Status"/><Property Name="action_log_handle" Type="Edm.String" MaxLength="32" sap:display-format="UpperCase" sap:label="Log Handle"/><Property Name="descr" Type="Edm.String" MaxLength="250"/><Property Name="tp_descr" Type="Edm.String" MaxLength="250"/><Property Name="tp_name" Type="Edm.String" MaxLength="32"/><Property Name="tp_level_name" Type="Edm.String" MaxLength="250"/><Property Name="nr_attributes" Type="Edm.Int32"/><Property Name="nr_masterdatas" Type="Edm.Int32"/><Property Name="nr_versions" Type="Edm.Int32"/><Property Name="nr_planninglevels" Type="Edm.Int32"/><Property Name="nr_keyfigures" Type="Edm.Int32"/></EntityType>
+			<EntityContainer Name="ZMS_C_DM_ACT_PLANNING_AREA3_SRV_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true"
+				sap:supported-formats="atom json xlsx"><EntitySet Name="ZMS_C_DM_ACT_PLANNING_AREA" EntityType="ZMS_C_DM_ACT_PLANNING_AREA3_SRV.ZMS_C_DM_ACT_PLANNING_AREAType"
+				sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/></EntityContainer>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm"
+				Target="ZMS_C_DM_ACT_PLANNING_AREA3_SRV.ZMS_C_DM_ACT_PLANNING_AREA3_SRV_Entities"><Annotation Term="Common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+				<Annotation Term="Aggregation.ApplySupported">
+					<Record>
+						<PropertyValue Property="Transformations">
+							<Collection>
+								<String>aggregate</String>
+								<String>groupby</String>
+								<String>filter</String>
+							</Collection>
+						</PropertyValue><PropertyValue Property="Rollup" EnumMember="None"/></Record>
+				</Annotation>
+			</Annotations><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZMS_C_DM_ACT_PLANNING_AREA3_SRV/$metadata"/><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZMS_C_DM_ACT_PLANNING_AREA3_SRV/$metadata"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
