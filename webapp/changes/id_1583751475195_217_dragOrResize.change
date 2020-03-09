@@ -1,0 +1,59 @@
+{
+	"fileName": "id_1583751475195_217_dragOrResize",
+	"fileType": "change",
+	"changeType": "dragOrResize",
+	"moduleName": "",
+	"reference": "tst.demo2.Demo2.Component",
+	"packageName": "$TMP",
+	"content": {
+		"cardId": "card05",
+		"dashboardLayout": {
+			"C5": {
+				"rowSpan": 30,
+				"oldRowSpan": 30,
+				"colSpan": 2,
+				"oldColSpan": 3,
+				"maxColSpan": 2,
+				"oldMaxColSpan": 3,
+				"noOfItems": 7,
+				"oldNoOfItems": 7,
+				"autoSpan": false,
+				"oldAutoSpan": true,
+				"showOnlyHeader": false,
+				"row": 61,
+				"oldRow": 71,
+				"column": 2,
+				"oldColumn": 2
+			}
+		}
+	},
+	"selector": {
+		"id": "mainView--card05",
+		"idIsLocal": false
+	},
+	"layer": "USER",
+	"texts": {},
+	"namespace": "apps/tst.demo2.Demo2/changes/",
+	"projectId": "tst.demo2.Demo2",
+	"creation": "2020-03-09T10:57:55.220Z",
+	"originalLanguage": "EN",
+	"conditions": {},
+	"context": "",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.75.0",
+		"sourceChangeFileName": "",
+		"compositeCommand": ""
+	},
+	"oDataInformation": {},
+	"dependentSelector": {},
+	"validAppVersions": {
+		"creation": "${project.version}",
+		"from": "${project.version}"
+	},
+	"jsOnly": true,
+	"variantReference": "",
+	"appDescriptorChange": false
+}

@@ -1,0 +1,46 @@
+{
+	"fileName": "id_1583751515024_225_dragOrResize",
+	"fileType": "change",
+	"changeType": "dragOrResize",
+	"moduleName": "",
+	"reference": "tst.demo2.Demo2.Component",
+	"packageName": "$TMP",
+	"content": {
+		"cardId": "card06",
+		"dashboardLayout": {
+			"C5": {
+				"row": 79,
+				"oldRow": 31
+			}
+		}
+	},
+	"selector": {
+		"id": "mainView--card06",
+		"idIsLocal": false
+	},
+	"layer": "USER",
+	"texts": {},
+	"namespace": "apps/tst.demo2.Demo2/changes/",
+	"projectId": "tst.demo2.Demo2",
+	"creation": "2020-03-09T10:58:35.112Z",
+	"originalLanguage": "EN",
+	"conditions": {},
+	"context": "",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.75.0",
+		"sourceChangeFileName": "",
+		"compositeCommand": ""
+	},
+	"oDataInformation": {},
+	"dependentSelector": {},
+	"validAppVersions": {
+		"creation": "${project.version}",
+		"from": "${project.version}"
+	},
+	"jsOnly": true,
+	"variantReference": "",
+	"appDescriptorChange": false
+}

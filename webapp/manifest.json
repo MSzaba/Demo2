@@ -241,11 +241,23 @@
 		"considerAnalyticalParameters": false,
 		"cards": {
 			"card00": {
+				"model": "ZMS_ATTRIBUTE_COUNT",
+				"template": "tst.demo2.Demo2.ext.ProcessFlowCard",
+				"settings": {
+					"title": "{{card00_title}}",
+					"entitySet": "ZMS_ATTRIBUTE_COUNT",
+					"defaultSpan": {
+						"rows": 1,
+						"cols": 7
+					}
+				}
+			},
+			"card01": {
 				"model": "ZMS_C_DM_ACT_PLANNING_AREA3_SRV",
 				"template": "sap.ovp.cards.table",
 				"settings": {
-					"title": "{{card00_title}}",
-					"subTitle": "{{card00_subTitle}}",
+					"title": "{{card01_title}}",
+					"subTitle": "{{card01_subTitle}}",
 					"entitySet": "ZMS_C_DM_ACT_PLANNING_AREA",
 					"sortBy": "plarea",
 					"sortOrder": "ascending",
@@ -258,12 +270,12 @@
 					}
 				}
 			},
-			"card01": {
+			"card02": {
 				"model": "ZMS_PROBA2",
 				"template": "sap.ovp.cards.list",
 				"settings": {
-					"title": "{{card01_title}}",
-					"subTitle": "{{card01_subTitle}}",
+					"title": "{{card02_title}}",
+					"subTitle": "{{card02_subTitle}}",
 					"entitySet": "ZMS_PROBA2",
 					"listType": "extended",
 					"listFlavor": "standard",
@@ -277,12 +289,12 @@
 					}
 				}
 			},
-			"card02": {
+			"card03": {
 				"model": "ZMS_ATTRIBUTE_COUNT",
 				"template": "sap.ovp.cards.table",
 				"settings": {
-					"title": "{{card02_title}}",
-					"subTitle": "{{card02_subTitle}}",
+					"title": "{{card03_title}}",
+					"subTitle": "{{card03_subTitle}}",
 					"entitySet": "ZMS_ATTRIBUTE_COUNT",
 					"listFlavor": "bar",
 					"sortBy": "attr_count",
@@ -294,12 +306,12 @@
 					}
 				}
 			},
-			"card03": {
+			"card04": {
 				"model": "ZMS_MADATYPE_COUNT",
 				"template": "sap.ovp.cards.table",
 				"settings": {
-					"title": "{{card03_title}}",
-					"subTitle": "{{card03_subTitle}}",
+					"title": "{{card04_title}}",
+					"subTitle": "{{card04_subTitle}}",
 					"entitySet": "ZMS_MADATYPE_COUNT",
 					"sortBy": "type",
 					"sortOrder": "descending",
@@ -311,12 +323,12 @@
 					}
 				}
 			},
-			"card04": {
+			"card05": {
 				"model": "ZMS_PLANNING_LEVEL",
 				"template": "sap.ovp.cards.table",
 				"settings": {
-					"title": "{{card04_title}}",
-					"subTitle": "{{card04_subTitle}}",
+					"title": "{{card05_title}}",
+					"subTitle": "{{card05_subTitle}}",
 					"entitySet": "ZMS_PLANNING_LEVEL",
 					"sortBy": "plevel",
 					"sortOrder": "ascending",
@@ -328,12 +340,12 @@
 					}
 				}
 			},
-			"card05": {
+			"card06": {
 				"model": "ZMS_KEY_FIGURE_COUNT",
 				"template": "sap.ovp.cards.table",
 				"settings": {
-					"title": "{{card05_title}}",
-					"subTitle": "{{card05_subTitle}}",
+					"title": "{{card06_title}}",
+					"subTitle": "{{card06_subTitle}}",
 					"entitySet": "ZMS_KEY_FIGURE_COUNT",
 					"sortBy": "plarea",
 					"sortOrder": "ascending",
@@ -345,10 +357,10 @@
 					}
 				}
 			},
-			"card06": {
+			"card07": {
 				"template": "tst.demo2.Demo2.ext.LinkListCard",
 				"settings": {
-					"title": "{{card06_title}}"
+					"title": "{{card07_title}}"
 				}
 			}
 		}
