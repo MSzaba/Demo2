@@ -1,0 +1,11 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:ovp="sap.ovp.ui"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+	<VBox class="sapUiSmallMargin">
+		<Link id="Attrinutes" text="Attributes" href="https://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;sap-language=EN#PlanningModel-configureAttributes" target="_blank" />
+		<Link text="Master Data Types" href="https://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;sap-language=EN#PlanningModel-configureMasterData" target="_blank" />
+		<Link text="Time Profiles" href="https://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;sap-language=EN#PlanningModel-configureTimeProfile" target="_blank" />
+		<Link text="Planning Areas" href="https://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;-language=EN#PlanningModel-configurePlanningArea" target="_blank"/>
+		<Link text="Sample Model Entities" href="https://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;sap-language=EN#PlanningModel-displaySampleModel" target="_blank"/>
+		<Link text="Key Figure Calculations" href="https://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;sap-language=EN#PlanningModel-configureKeyFigCalc" target="_blank"/>
+	</VBox>	
+</core:FragmentDefinition>
