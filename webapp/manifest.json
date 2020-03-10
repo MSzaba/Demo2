@@ -248,7 +248,7 @@
 					"entitySet": "ZMS_ATTRIBUTE_COUNT",
 					"defaultSpan": {
 						"rows": 1,
-						"cols": 7
+						"cols": 25
 					}
 				}
 			},
@@ -294,7 +294,7 @@
 				"template": "sap.ovp.cards.table",
 				"settings": {
 					"title": "{{card03_title}}",
-					"subTitle": "{{card03_subTitle}}",
+					"subTitle": "{{ZMS_ATTRIBUTE_COUNT>/datatype}}",
 					"entitySet": "ZMS_ATTRIBUTE_COUNT",
 					"listFlavor": "bar",
 					"sortBy": "attr_count",

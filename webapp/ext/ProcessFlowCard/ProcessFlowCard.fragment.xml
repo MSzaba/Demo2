@@ -8,54 +8,45 @@
 		<items>
 			<IconTabFilter
 				id ="Attributes"
-				icon="sap-icon://bullet-text"
+				
 				iconColor="Positive"
 				design="Horizontal"
 				count="{/ZMS_ATTRIBUTE_COUNT/attr_count} "
 				text="Attributes"
 				key="Ok" >
-				<content>
-					<Link id="Attrinutes" text="Attributes" href="https://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;sap-language=EN#PlanningModel-configureAttributes" target="_blank" />
-				</content>
+
 			</IconTabFilter>
 			<IconTabSeparator icon="sap-icon://open-command-field" />
 			<IconTabFilter
 				id="MasterDataTypes"
-				icon="sap-icon://database"
+			
 				iconColor="Positive"
 				design="Horizontal"
 				count="{/ProductCollectionStats/Counts/Weight/Heavy} of {/ProductCollectionStats/Counts/Total}"
 				text="Master Data Types"
 				key="Heavy" >
-				<content>
-					<Link text="Master Data Types" href="https://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;sap-language=EN#PlanningModel-configureMasterData" target="_blank" />
-				</content>
+				
 			</IconTabFilter>
 			<IconTabSeparator icon="sap-icon://open-command-field" />
 			<IconTabFilter
 				id="TimeProfiles"
-				icon="sap-icon://timesheet"
+			
 				iconColor="Positive"
 				design="Horizontal"
 				count="{/ProductCollectionStats/Counts/Weight/Overweight} of {/ProductCollectionStats/Counts/Total}"
 				text="Time Profiles"
 				key="Overweight" >
-				<content>
-					<Link text="Time Profiles" href="https://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;sap-language=EN#PlanningModel-configureTimeProfile" target="_blank" />
-				</content>
 			</IconTabFilter>
 			<IconTabSeparator icon="sap-icon://open-command-field" />
 			<IconTabFilter
 				id="PlanningAreas"
-				icon="sap-icon://legend"
+				
 				iconColor="Positive"
 				design="Horizontal"
 				count="{/ProductCollectionStats/Counts/Weight/Overweight} of {/ProductCollectionStats/Counts/Total}"
 				text="Planning Areas"
 				key="Overweight">
-				<content>
-					<Link text="Planning Areas" href="https://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;-language=EN#PlanningModel-configurePlanningArea" target="_blank"/>
-				</content>
+			
 			</IconTabFilter>
 		</items>
 	</IconTabBar>

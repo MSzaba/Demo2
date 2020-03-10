@@ -11,26 +11,8 @@
         onInit: function () {
              //this.setWidth("100%");
              
-            this.byId("Attributes").attachEvent("click", function() {
-				sap.m.MessageToast.show("Click on Attributes" );
-				/* eslint no-console: ["error", { allow: ["warn", "error"] }] */
-				console.warn("Attributes");
-			});
-			this.byId("MasterDataTypes").attachEvent("click", function() {
-				sap.m.MessageToast.show("Click on MasterDataTypes" );
-				/* eslint no-console: ["error", { allow: ["warn", "error"] }] */
-				console.warn("MasterDataTypes");
-			});
-			this.byId("TimeProfiles").attachEvent("click", function() {
-				sap.m.MessageToast.show("Click on TimeProfiles" );
-				/* eslint no-console: ["error", { allow: ["warn", "error"] }] */
-				console.warn("TimeProfiles");
-			});
-			this.byId("PlanningAreas").attachEvent("click", function() {
-				sap.m.MessageToast.show("Click on PlanningAreas");
-				/* eslint no-console: ["error", { allow: ["warn", "error"] }] */
-				console.warn("PlanningAreas");
-			});
+            this.byId("idIconTabBar").attachBrowserEvent("click", this.clickHandler);
+
 		
         },
  
@@ -40,7 +22,21 @@
         },
         
         clickHandler: function(oEvent) {
-			sap.m.MessageToast.show("Click on" + oEvent.getId());
+			//console.warn("Click on" + oEvent.toElement.id);
+			switch(oEvent.toElement.id) {
+				case "card00Original--Attributes-text":
+					sap.m.URLHelper.redirect("https://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;sap-language=EN#PlanningModel-configureAttributes", true);
+					break; 
+				case "card00Original--MasterDataTypes-text":
+					sap.m.URLHelper.redirect("https://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;sap-language=EN#PlanningModel-configureMasterData", true);
+					break;
+				case "card00Original--TimeProfiles-text":
+					sap.m.URLHelper.redirect("https://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;sap-language=EN#PlanningModel-configureTimeProfile", true);
+					break;
+				case "card00Original--PlanningAreas-text":
+					sap.m.URLHelper.redirect("https://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;-language=EN#PlanningModel-configurePlanningArea", true);
+					break;
+			}
 		}
  
  
