@@ -8,7 +8,7 @@
 		<items>
 			<IconTabFilter
 				id ="Attributes"
-				icon="sap-icon://bullet-text"
+				
 				iconColor="Positive"
 				design="Horizontal"
 				count="{/ZMS_ATTRIBUTE_COUNT/attr_count} "
@@ -21,7 +21,7 @@
 			<IconTabSeparator icon="sap-icon://open-command-field" />
 			<IconTabFilter
 				id="MasterDataTypes"
-				icon="sap-icon://database"
+			
 				iconColor="Positive"
 				design="Horizontal"
 				count="{/ProductCollectionStats/Counts/Weight/Heavy} of {/ProductCollectionStats/Counts/Total}"
@@ -34,7 +34,7 @@
 			<IconTabSeparator icon="sap-icon://open-command-field" />
 			<IconTabFilter
 				id="TimeProfiles"
-				icon="sap-icon://timesheet"
+			
 				iconColor="Positive"
 				design="Horizontal"
 				count="{/ProductCollectionStats/Counts/Weight/Overweight} of {/ProductCollectionStats/Counts/Total}"
@@ -47,7 +47,7 @@
 			<IconTabSeparator icon="sap-icon://open-command-field" />
 			<IconTabFilter
 				id="PlanningAreas"
-				icon="sap-icon://legend"
+				
 				iconColor="Positive"
 				design="Horizontal"
 				count="{/ProductCollectionStats/Counts/Weight/Overweight} of {/ProductCollectionStats/Counts/Total}"
