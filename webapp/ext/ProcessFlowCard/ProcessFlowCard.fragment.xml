@@ -14,7 +14,6 @@
 				count="{/ZMS_ATTRIBUTE_COUNT/attr_count} "
 				text="Attributes"
 				key="Ok" >
-
 			</IconTabFilter>
 			<IconTabSeparator icon="sap-icon://open-command-field" />
 			<IconTabFilter
@@ -25,7 +24,6 @@
 				count="{/ProductCollectionStats/Counts/Weight/Heavy} of {/ProductCollectionStats/Counts/Total}"
 				text="Master Data Types"
 				key="Heavy" >
-				
 			</IconTabFilter>
 			<IconTabSeparator icon="sap-icon://open-command-field" />
 			<IconTabFilter
