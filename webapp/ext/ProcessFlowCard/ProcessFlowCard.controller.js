@@ -11,14 +11,67 @@
         onInit: function () {
              //this.setWidth("100%");
              
-            this.byId("idIconTabBar").attachBrowserEvent("click", this.clickHandler);
-
-		
+            this.byId("idIconTabBar").attachBrowserEvent("click", function(oClickEvent) {
+            	this.clickHandler(oClickEvent);
+            }.bind(this));
+            this._viewModel = new sap.ui.model.json.JSONModel({"AttributesCount": 0, "MasterDataTypesCount" : 0, "TimeProfileCount": 0, "PlanningAreaCount": 0});
+            this.getView().byId("idIconTabBar").setModel(this._viewModel, "view");
         },
  
         onAfterRendering: function () {
- 
-             
+        	var modelA = this.getModel("ZMS_ATTRIBUTE_COUNT");
+			modelA.metadataLoaded().then(function() {
+				modelA.attachEventOnce("requestCompleted", function(oModelEvent) {
+					var data = this.getModel("ZMS_ATTRIBUTE_COUNT").getProperty("/");
+					for (var propName in data) {
+						var currentData = data[propName];
+						if (currentData.datatype === "ALL") {
+							this._viewModel.setProperty("/AttributesCount", currentData.attr_count);
+							break;
+						}
+					}
+				}.bind(this));
+			}.bind(this));
+			var modelM = this.getModel("ZMS_MADATYPE_COUNT");
+			modelM.metadataLoaded().then(function() {
+				modelM.attachEventOnce("requestCompleted", function(oModelEvent) {
+					var data = this.getModel("ZMS_MADATYPE_COUNT").getProperty("/");
+					var sum = 0;
+					for (var propName in data) {
+						var currentData = data[propName];
+						sum += currentData.obj_type_count;
+					}
+					this._viewModel.setProperty("/MasterDataTypesCount", sum);
+				}.bind(this));
+			}.bind(this));
+			// var modelA = this.getModel("ZMS_ATTRIBUTE_COUNT");
+			// modelA.metadataLoaded().then(function() {
+			// 	modelA.attachEventOnce("requestCompleted", function(oModelEvent) {
+			// 		var data = this.getModel("ZMS_ATTRIBUTE_COUNT").getProperty("/");
+			// 		for (var propName in data) {
+			// 			var currentData = data[propName];
+			// 			if (currentData.datatype === "ALL") {
+			// 				this._viewModel.oData.AttributesCount = currentData.attr_count;
+			// 				this._viewModel.refresh();
+			// 				break;
+			// 			}
+			// 		}
+			// 	}.bind(this));
+			// }.bind(this));
+			// var modelA = this.getModel("ZMS_ATTRIBUTE_COUNT");
+			// modelA.metadataLoaded().then(function() {
+			// 	modelA.attachEventOnce("requestCompleted", function(oModelEvent) {
+			// 		var data = this.getModel("ZMS_ATTRIBUTE_COUNT").getProperty("/");
+			// 		for (var propName in data) {
+			// 			var currentData = data[propName];
+			// 			if (currentData.datatype === "ALL") {
+			// 				this._viewModel.oData.AttributesCount = currentData.attr_count;
+			// 				this._viewModel.refresh();
+			// 				break;
+			// 			}
+			// 		}
+			// 	}.bind(this));
+			// }.bind(this));
         },
         
         clickHandler: function(oEvent) {

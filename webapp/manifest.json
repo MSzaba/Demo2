@@ -241,11 +241,11 @@
 		"considerAnalyticalParameters": false,
 		"cards": {
 			"card00": {
-				"model": "ZMS_ATTRIBUTE_COUNT",
+				
 				"template": "tst.demo2.Demo2.ext.ProcessFlowCard",
 				"settings": {
 					"title": "{{card00_title}}",
-					"entitySet": "ZMS_ATTRIBUTE_COUNT",
+					
 					"defaultSpan": {
 						"rows": 1,
 						"cols": 25
@@ -294,7 +294,7 @@
 				"template": "sap.ovp.cards.table",
 				"settings": {
 					"title": "{{card03_title}}",
-					"subTitle": "{{ZMS_ATTRIBUTE_COUNT>/datatype}}",
+					"subTitle": "{ZMS_ATTRIBUTE_COUNT>datatype}",
 					"entitySet": "ZMS_ATTRIBUTE_COUNT",
 					"listFlavor": "bar",
 					"sortBy": "attr_count",

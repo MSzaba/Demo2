@@ -1,6 +1,7 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:ovp="sap.ovp.ui"
 	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1" width="auto">
 	<IconTabBar
+	
 		expanded="true"
 		id="idIconTabBar"
 		select="handleIconTabBarSelect"
@@ -9,9 +10,9 @@
 			<IconTabFilter
 				id ="Attributes"
 				
-				iconColor="Positive"
-				design="Horizontal"
-				count="{/ZMS_ATTRIBUTE_COUNT/attr_count} "
+			
+				design="Vertical"
+				count="{view>/AttributesCount}"
 				text="Attributes"
 				key="Ok" >
 			</IconTabFilter>
@@ -19,9 +20,9 @@
 			<IconTabFilter
 				id="MasterDataTypes"
 			
-				iconColor="Positive"
+		
 				design="Horizontal"
-				count="{/ProductCollectionStats/Counts/Weight/Heavy} of {/ProductCollectionStats/Counts/Total}"
+				count="{view>/MasterDataTypesCount}"
 				text="Master Data Types"
 				key="Heavy" >
 			</IconTabFilter>
@@ -29,9 +30,9 @@
 			<IconTabFilter
 				id="TimeProfiles"
 			
-				iconColor="Positive"
+			
 				design="Horizontal"
-				count="{/ProductCollectionStats/Counts/Weight/Overweight} of {/ProductCollectionStats/Counts/Total}"
+				count="{view>/TimeProfileCount}"
 				text="Time Profiles"
 				key="Overweight" >
 			</IconTabFilter>
@@ -39,9 +40,9 @@
 			<IconTabFilter
 				id="PlanningAreas"
 				
-				iconColor="Positive"
+		
 				design="Horizontal"
-				count="{/ProductCollectionStats/Counts/Weight/Overweight} of {/ProductCollectionStats/Counts/Total}"
+				count="{view>/PlanningAreaCount}"
 				text="Planning Areas"
 				key="Overweight">
 			
