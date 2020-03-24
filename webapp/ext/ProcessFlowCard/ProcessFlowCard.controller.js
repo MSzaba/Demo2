@@ -19,59 +19,23 @@
         },
  
         onAfterRendering: function () {
-        	var modelA = this.getModel("ZMS_ATTRIBUTE_COUNT");
+        	var modelA = this.getModel("ZMS_OBJECT_COUNT");
 			modelA.metadataLoaded().then(function() {
-				modelA.attachEventOnce("requestCompleted", function(oModelEvent) {
-					var data = this.getModel("ZMS_ATTRIBUTE_COUNT").getProperty("/");
-					for (var propName in data) {
-						var currentData = data[propName];
-						if (currentData.datatype === "ALL") {
-							this._viewModel.setProperty("/AttributesCount", currentData.attr_count);
-							break;
-						}
-					}
-				}.bind(this));
+				modelA.read("/ZMS_OBJECT_COUNT_2", {
+					"success": function(oResult) { 
+        			   var plarea_count = oResult.results[0].plarea_count;
+        			   var attributes_count = oResult.results[0].attributes_count;
+        			   var masterdata_count = oResult.results[0].masterdata_count;
+        			   var timeprofile_count = oResult.results[0].timeprofile_count;
+        			   this._viewModel.setProperty("/PlanningAreaCount", plarea_count);
+        			   this._viewModel.setProperty("/AttributesCount", attributes_count);
+        			   this._viewModel.setProperty("/MasterDataTypesCount", masterdata_count);
+        			   this._viewModel.setProperty("/TimeProfileCount", timeprofile_count);
+					}.bind(this)
+				});
+
 			}.bind(this));
-			var modelM = this.getModel("ZMS_MADATYPE_COUNT");
-			modelM.metadataLoaded().then(function() {
-				modelM.attachEventOnce("requestCompleted", function(oModelEvent) {
-					var data = this.getModel("ZMS_MADATYPE_COUNT").getProperty("/");
-					var sum = 0;
-					for (var propName in data) {
-						var currentData = data[propName];
-						sum += currentData.obj_type_count;
-					}
-					this._viewModel.setProperty("/MasterDataTypesCount", sum);
-				}.bind(this));
-			}.bind(this));
-			// var modelA = this.getModel("ZMS_ATTRIBUTE_COUNT");
-			// modelA.metadataLoaded().then(function() {
-			// 	modelA.attachEventOnce("requestCompleted", function(oModelEvent) {
-			// 		var data = this.getModel("ZMS_ATTRIBUTE_COUNT").getProperty("/");
-			// 		for (var propName in data) {
-			// 			var currentData = data[propName];
-			// 			if (currentData.datatype === "ALL") {
-			// 				this._viewModel.oData.AttributesCount = currentData.attr_count;
-			// 				this._viewModel.refresh();
-			// 				break;
-			// 			}
-			// 		}
-			// 	}.bind(this));
-			// }.bind(this));
-			// var modelA = this.getModel("ZMS_ATTRIBUTE_COUNT");
-			// modelA.metadataLoaded().then(function() {
-			// 	modelA.attachEventOnce("requestCompleted", function(oModelEvent) {
-			// 		var data = this.getModel("ZMS_ATTRIBUTE_COUNT").getProperty("/");
-			// 		for (var propName in data) {
-			// 			var currentData = data[propName];
-			// 			if (currentData.datatype === "ALL") {
-			// 				this._viewModel.oData.AttributesCount = currentData.attr_count;
-			// 				this._viewModel.refresh();
-			// 				break;
-			// 			}
-			// 		}
-			// 	}.bind(this));
-			// }.bind(this));
+			
         },
         
         clickHandler: function(oEvent) {

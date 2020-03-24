@@ -149,6 +149,40 @@
 				"settings": {
 					"localUri": "localService/ZMS_TIME_PROFILE_IN_PA2/ZMS_TIME_PROFILE_IN_PA2_annotations_0.xml"
 				}
+			},
+			"ZMS_QUICK_LINKS": {
+				"uri": "/sap/opu/odata/sap/ZMS_QUICK_LINKS_SRV/",
+				"type": "OData",
+				"settings": {
+					"annotations": [
+						"ZMS_QUICK_LINKSAnno0"
+					],
+					"localUri": "localService/TMS_QUICK_LINKS/metadata.xml"
+				}
+			},
+			"ZMS_QUICK_LINKSAnno0": {
+				"uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZMS_QUICK_LINKS_ANNO_MDL',Version='0001')/$value/",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "localService/ZMS_QUICK_LINKS/TMS_QUICK_LINKS_annotations_0.xml"
+				}
+			},
+			"ZMS_OBJECT_COUNT": {
+				"uri": "/sap/opu/odata/sap/ZMS_OBJECT_COUNT_SRV/",
+				"type": "OData",
+				"settings": {
+					"annotations": [
+						"ZMS_OBJECT_COUNTAnno0"
+					],
+					"localUri": "localService/ZMS_OBJECT_COUNT/metadata.xml"
+				}
+			},
+			"ZMS_OBJECT_COUNTAnno0": {
+				"uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZMS_OBJECT_COUNT_ANNO_MDL',Version='0001')/$value/",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "localService/ZMS_OBJECT_COUNT/ZMS_OBJECT_COUNT_annotations_0.xml"
+				}
 			}
 		},
 		"sourceTemplate": {
@@ -219,6 +253,18 @@
 				"settings": {
 					"defaultCountMode": "Inline"
 				}
+			},
+			"ZMS_QUICK_LINKS": {
+				"dataSource": "ZMS_QUICK_LINKS",
+				"settings": {
+					"defaultCountMode": "Inline"
+				}
+			},
+			"ZMS_OBJECT_COUNT": {
+				"dataSource": "ZMS_OBJECT_COUNT",
+				"settings": {
+					"defaultCountMode": "Inline"
+				}
 			}
 		},
 		"extends": {
@@ -241,11 +287,11 @@
 		"considerAnalyticalParameters": false,
 		"cards": {
 			"card00": {
-				
+				"model": "ZMS_OBJECT_COUNT",
 				"template": "tst.demo2.Demo2.ext.ProcessFlowCard",
 				"settings": {
 					"title": "{{card00_title}}",
-					
+					"entitySet": "ZMS_OBJECT_COUNT_2",
 					"defaultSpan": {
 						"rows": 1,
 						"cols": 25
@@ -268,6 +314,52 @@
 						"rows": 7,
 						"cols": 3
 					}
+				}
+			},
+			"card09": {
+				"model": "ZMS_QUICK_LINKS",
+				"template": "sap.ovp.cards.linklist",
+				"settings": {
+					"title": "{{card09_title}}",
+					"entitySet": "ZMS_LINKS_SERVICE",
+					"listFlavor": "standard",
+            		"targetUri": "https://en.wikipedia.org/wiki/Mangalyaan_2",
+					"defaultSpan": {
+						"rows": 9,
+						"cols": 1
+					},
+		            "staticContent": [
+		              {
+		                "title": "Attributes",
+		                "targetUri": "https://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;sap-language=EN#PlanningModel-configureAttributes",
+		                "openInNewWindow": true
+		              },
+		              {
+		                "title": "Master Data Types",
+		                "targetUri": "https://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;sap-language=EN#PlanningModel-configureMasterData",
+		                "openInNewWindow": true
+		              },
+		              {
+		                "title": "Time Profiles",
+		                "targetUri": "ttps://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;sap-language=EN#PlanningModel-configureTimeProfile",
+		                "openInNewWindow": true
+		              },
+		              {
+		                "title": "Planning Areas",
+		                "targetUri": "https://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;-language=EN#PlanningModel-configurePlanningArea",
+		                "openInNewWindow": true
+		              },
+		              {
+		                "title": "Sample Model Entities",
+		                "targetUri": "https://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;sap-language=EN#PlanningModel-displaySampleModel",
+		                "openInNewWindow": true
+		              },
+		              {
+		                "title": "Key Figure Calculations",
+		                "targetUri": "https://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;sap-language=EN#PlanningModel-configureKeyFigCalc",
+		                "openInNewWindow": true
+		              }
+		           ]
 				}
 			},
 			"card02": {
