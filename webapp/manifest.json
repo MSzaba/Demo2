@@ -78,6 +78,7 @@
 				"type": "OData",
 				"settings": {
 					"annotations": [
+						"ZMS_MADATYPE_COUNT_annotation",
 						"ZMS_MADATYPE_COUNTAnno0"
 					],
 					"localUri": "localService/ZMS_MADATYPE_COUNT/metadata.xml"
@@ -88,6 +89,13 @@
 				"type": "ODataAnnotation",
 				"settings": {
 					"localUri": "localService/ZMS_MADATYPE_COUNT/ZMS_MADATYPE_COUNT_annotations_0.xml"
+				}
+			},
+			"ZMS_MADATYPE_COUNT_annotation": {
+				"uri": "ZMS_MADATYPE_COUNT_annotation.xml",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "ZMS_MADATYPE_COUNT_annotation.xml"
 				}
 			},
 			"ZMS_PLANNING_LEVEL": {
@@ -457,6 +465,17 @@
 				"template": "tst.demo2.Demo2.ext.LinkListCard",
 				"settings": {
 					"title": "{{card07_title}}"
+				}
+			},
+			"card10": {
+				"model": "ZMS_MADATYPE_COUNT",
+				"template": "sap.ovp.cards.charts.analytical",
+				"settings": {
+					"title": "{{card10_title}}",
+					"entitySet": "ZMS_MADATYPE_COUNT",
+					"presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#Simple",
+					"chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart",
+					"navigation": "dataPointNav"
 				}
 			}
 		}

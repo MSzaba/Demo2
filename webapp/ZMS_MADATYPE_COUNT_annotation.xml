@@ -1,0 +1,75 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference Uri="/sap/opu/odata/sap/ZMS_MADATYPE_COUNT_SRV/$metadata">
+		<edmx:Include Alias="Metadata" Namespace="ZMS_MADATYPE_COUNT_SRV"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470968/UI.xml?api=v2">
+		<edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470974/Common.xml?api=v2">
+		<edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+	</edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="TestOP5.ZMS_MADATYPE_COUNT_annotation.ZMS_MADATYPE_COUNT_SRV">
+			<Annotations Target="Metadata.ZMS_MADATYPE_COUNTType">
+				<Annotation Term="UI.PresentationVariant">
+					<Record Type="UI.PresentationVariantType">
+						<!--PropertyValue Property="GroupBy">
+                            <Collection>
+                                <PropertyPath>datatype</PropertyPath>
+                            </Collection>
+                        </PropertyValue-->
+						<PropertyValue Property="Text" String="Number of Data Types"/>
+						<PropertyValue Property="MaxItems" Int="8"/>
+						<PropertyValue Property="SortOrder">
+							<Collection>
+								<Record Type="Common.SortOrderType">
+									<PropertyValue Property="Property" PropertyPath="type"/>
+									<PropertyValue Property="Descending" Bool="false"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection/>
+				</Annotation>
+				<Annotation Term="UI.Chart">
+					<Record Type="UI.ChartDefinitionType">
+						<PropertyValue Property="ChartType" EnumMember="UI.ChartType/Donut"/>
+						<PropertyValue Property="Title" String="{@i18n&gt;MADATYPE_title}"/>
+						<PropertyValue Property="MeasureAttributes">
+							<Collection>
+								<Record Type="UI.ChartMeasureAttributeType">
+									<PropertyValue Property="Measure" PropertyPath="obj_type_count"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+									<PropertyValue Property="DataPoint" AnnotationPath="@UI.DataPoint#obj_type_count"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="DimensionAttributes">
+							<Collection>
+								<Record Type="UI.ChartDimensionAttributeType">
+									<PropertyValue Property="Dimension" PropertyPath="type"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Series"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="obj_type_count">
+					<Record>
+						<PropertyValue Property="Value" Path="obj_type_count"/>
+						<PropertyValue Property="Title" String="Number of Object Types"/>
+						<PropertyValue Property="MinimumValue" Decimal="0"/>
+						<PropertyValue Property="MaximumValue" Decimal="4000"/>
+						<PropertyValue Property="ValueFormat">
+							<Record>
+								<PropertyValue Property="NumberOfFractionalDigits" Int="0"/>
+							</Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
