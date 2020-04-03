@@ -1,4 +1,5 @@
-<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
 	<edmx:Reference
 		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/></edmx:Reference>
 	<edmx:Reference
@@ -13,19 +14,60 @@
 		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='PD6CLNT001_T')/$value"><edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/></edmx:Reference>
 	<edmx:Reference Uri="../../../sap/zms_attribute_count_srv/$metadata"><edmx:Include Namespace="ZMS_ATTRIBUTE_COUNT_SRV" Alias="SAP"/></edmx:Reference>
 	<edmx:DataServices>
-		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="zms_attribute_count_anno_mdl.v1">
+		<Schema Namespace="zms_attribute_count_anno_mdl.v1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
 			<Annotations Target="ZMS_ATTRIBUTE_COUNT_SRV.ZMS_ATTRIBUTE_COUNTType">
+				<Annotation Term="UI.Chart" Qualifier="AttributeTypes">
+					<Record Type="UI.ChartDefinitionType"><PropertyValue Property="ChartType" EnumMember="UI.ChartType/Column"/>
+						<PropertyValue Property="Dimensions">
+							<Collection>
+								<PropertyPath>datatype</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="DimensionAttributes">
+							<Collection>
+								<Record Type="UI.ChartDimensionAttributeType"><PropertyValue Property="Dimension" PropertyPath="datatype"/><PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/></Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Measures">
+							<Collection>
+								<PropertyPath>attr_count</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="MeasureAttributes">
+							<Collection>
+								<Record Type="UI.ChartMeasureAttributeType"><PropertyValue Property="Measure" PropertyPath="attr_count"/><PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/><PropertyValue Property="DataPoint" AnnotationPath="@UI.DataPoint#attr_count"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
 				<Annotation Term="UI.DataPoint" Qualifier="attr_count">
-					<Record><PropertyValue Property="Value" Path="attr_count"/><PropertyValue Property="Title" String="Count 1"/></Record>
+					<Record><PropertyValue Property="Value" Path="attr_count"/><PropertyValue Property="Title" String="Attribute Count"/><PropertyValue Property="MinimumValue" Decimal="0"/><PropertyValue Property="MaximumValue" Decimal="2500"/></Record>
 				</Annotation>
 				<Annotation Term="UI.DataPoint" Qualifier="datatype">
-					<Record><PropertyValue Property="Value" Path="datatype"/><PropertyValue Property="Title" String="Data type 1"/></Record>
+					<Record><PropertyValue Property="Value" Path="datatype"/><PropertyValue Property="Title" String="Data Type"/><PropertyValue Property="MinimumValue" Decimal="0"/><PropertyValue Property="MaximumValue" Decimal="2500"/></Record>
 				</Annotation>
 				<Annotation Term="UI.LineItem">
 					<Collection>
+						<Record Type="UI.DataFieldForAnnotation"><PropertyValue Property="Label" String="Count 2"/><PropertyValue Property="Target" AnnotationPath="@UI.Chart"/></Record>
 						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Data type 2"/><PropertyValue Property="Value" Path="datatype"/></Record>
-						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Count 2"/><PropertyValue Property="Value" Path="attr_count"/></Record>
 					</Collection>
+				</Annotation>
+				<Annotation Term="UI.PresentationVariant" Qualifier="initial">
+					<Record><PropertyValue Property="Text" String="Initial Presentation"/><PropertyValue Property="MaxItems" Int="8"/>
+						<PropertyValue Property="SortOrder">
+							<Collection>
+								<Record Type="Common.SortOrderType"><PropertyValue Property="Property" PropertyPath="datatype"/><PropertyValue Property="Descending" Bool="false"/></Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Visualizations">
+							<Collection>
+								<AnnotationPath>@UI.Chart</AnnotationPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.SelectionPresentationVariant" Qualifier="initial">
+					<Record><PropertyValue Property="Text" String=""/><PropertyValue Property="PresentationVariant" Path="@UI.PresentationVariant#initial"/></Record>
 				</Annotation>
 			</Annotations>
 		</Schema>
