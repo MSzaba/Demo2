@@ -410,23 +410,7 @@
 					"navigation": "dataPointNav"
 				}
 			},
-			"card04": {
-				"model": "ZMS_MADATYPE_COUNT",
-				"template": "sap.ovp.cards.table",
-				"settings": {
-					"title": "{{card04_title}}",
-					"subTitle": "{{card04_subTitle}}",
-					"entitySet": "ZMS_MADATYPE_COUNT",
-					"sortBy": "type",
-					"sortOrder": "descending",
-					"addODataSelect": false,
-					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
-					"defaultSpan": {
-						"rows": 7,
-						"cols": 3
-					}
-				}
-			},
+			
 			"card05": {
 				"model": "ZMS_PLANNING_LEVEL",
 				"template": "sap.ovp.cards.table",
@@ -461,12 +445,7 @@
 					}
 				}
 			},
-			"card07": {
-				"template": "tst.demo2.Demo2.ext.LinkListCard",
-				"settings": {
-					"title": "{{card07_title}}"
-				}
-			},
+			
 			"card10": {
 				"model": "ZMS_MADATYPE_COUNT",
 				"template": "sap.ovp.cards.charts.analytical",

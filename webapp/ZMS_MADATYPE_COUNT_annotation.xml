@@ -49,7 +49,7 @@
 						<PropertyValue Property="DimensionAttributes">
 							<Collection>
 								<Record Type="UI.ChartDimensionAttributeType">
-									<PropertyValue Property="Dimension" PropertyPath="type"/>
+									<PropertyValue Property="Dimension" PropertyPath="long_type"/>
 									<PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Series"/>
 								</Record>
 							</Collection>

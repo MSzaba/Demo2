@@ -11,7 +11,7 @@
 				<Annotation Term="UI.Chart">
 					<Record Type="UI.ChartDefinitionType">
 						<PropertyValue Property="ChartType" EnumMember="UI.ChartType/Bar"/>
-						<!--PropertyValue Property="Title" String="{@i18n&gt;ATTRIBUTES_4}"/-->
+						<PropertyValue Property="Title" String="{@i18n&gt;ATTRIBUTES_4}"/>
 					
 						<PropertyValue Property="MeasureAttributes">
 							<Collection>
