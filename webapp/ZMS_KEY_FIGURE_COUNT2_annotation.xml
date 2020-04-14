@@ -1,0 +1,68 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference Uri="/sap/opu/odata/sap/ZMS_KEY_FIGURE_COUNT2_SRV/$metadata">
+		<edmx:Include Alias="Metadata" Namespace="ZMS_KEY_FIGURE_COUNT2_SRV"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470968/UI.xml?api=v2">
+		<edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+	</edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="TestOP5.ZMS_KEY_FIGURE_COUNT2_annotation.ZMS_KEY_FIGURE_COUNT2_SRV">
+			<Annotations Target="Metadata.ZSZT_TEST_GET_KF_TYPE_COUNTNType">
+				<Annotation Term="UI.Chart">
+					<Record Type="UI.ChartDefinitionType">
+						<PropertyValue Property="ChartType" EnumMember="UI.ChartType/Bar"/>
+						<PropertyValue Property="MeasureAttributes">
+							<Collection>
+								<Record Type="UI.ChartMeasureAttributeType">
+									<PropertyValue Property="Measure" PropertyPath="counter"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+									<PropertyValue Property="DataPoint" AnnotationPath="@UI.DataPoint#counter"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="DimensionAttributes">
+							<Collection>
+								<Record Type="UI.ChartDimensionAttributeType">
+									<PropertyValue Property="Dimension" PropertyPath="type"/>
+									<PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Series"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="counter">
+					<Record>
+						<PropertyValue Property="Value" Path="counter"/>
+						<PropertyValue Property="Title" String="Number of Object Types"/>
+						<PropertyValue Property="MinimumValue" Decimal="0"/>
+						<PropertyValue Property="MaximumValue" Decimal="4000"/>
+						<PropertyValue Property="ValueFormat">
+							<Record>
+								<PropertyValue Property="NumberOfFractionalDigits" Int="0"/>
+							</Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.PresentationVariant">
+					<Record Type="UI.PresentationVariantType">
+						<!--PropertyValue Property="GroupBy">
+                            <Collection>
+                                <PropertyPath>datatype</PropertyPath>
+                            </Collection>
+                        </PropertyValue-->
+						<PropertyValue Property="Text" String="Number of KEy Figures"/>
+						<PropertyValue Property="MaxItems" Int="8"/>
+						<PropertyValue Property="SortOrder">
+							<Collection>
+								<Record Type="Common.SortOrderType">
+									<PropertyValue Property="Property" PropertyPath="type"/>
+									<PropertyValue Property="Descending" Bool="false"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

@@ -199,6 +199,31 @@
 				"settings": {
 					"localUri": "localService/ZMS_OBJECT_COUNT/ZMS_OBJECT_COUNT_annotations_0.xml"
 				}
+			},
+			"ZMS_KEY_FIGURE_COUNT2": {
+				"uri": "/sap/opu/odata/sap/ZMS_KEY_FIGURE_COUNT2_SRV/",
+				"type": "OData",
+				"settings": {
+					"annotations": [
+						"ZMS_KEY_FIGURE_COUNT2Anno0",
+						"ZMS_KEY_FIGURE_COUNT2_annotation"
+					],
+					"localUri": "localService/ZMS_KEY_FIGURE_COUNT2/metadata.xml"
+				}
+			},
+			"ZMS_KEY_FIGURE_COUNT2Anno0": {
+				"uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZMS_KEY_FIGURE_COUNT2_ANNO_MDL',Version='0001')/$value/",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "localService/ZMS_KEY_FIGURE_COUNT2/ZMS_KEY_FIGURE_COUNT2_annotations_0.xml"
+				}
+			},
+			"ZMS_KEY_FIGURE_COUNT2_annotation": {
+				"type": "ODataAnnotation",
+				"uri": "ZMS_KEY_FIGURE_COUNT2_annotation.xml",
+				"settings": {
+					"localUri": "ZMS_KEY_FIGURE_COUNT2_annotation.xml"
+				}
 			}
 		},
 		"sourceTemplate": {
@@ -281,6 +306,12 @@
 				"settings": {
 					"defaultCountMode": "Inline"
 				}
+			},
+			"ZMS_KEY_FIGURE_COUNT2": {
+				"dataSource": "ZMS_KEY_FIGURE_COUNT2",
+				"settings": {
+					"defaultCountMode": "Inline"
+				}
 			}
 		},
 		"extends": {
@@ -324,6 +355,8 @@
 					"sortBy": "plarea",
 					"sortOrder": "ascending",
 					"addODataSelect": false,
+					"showFilterInHeader": true,
+					"showSortingInHeaer": true,
 					"identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
 					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
 					"defaultSpan": {
@@ -429,20 +462,16 @@
 				}
 			},
 			"card06": {
-				"model": "ZMS_KEY_FIGURE_COUNT",
-				"template": "sap.ovp.cards.table",
+				"model": "ZMS_KEY_FIGURE_COUNT2",
+				"template": "sap.ovp.cards.charts.analytical",
 				"settings": {
 					"title": "{{card06_title}}",
 					"subTitle": "{{card06_subTitle}}",
-					"entitySet": "ZMS_KEY_FIGURE_COUNT",
-					"sortBy": "plarea",
-					"sortOrder": "ascending",
-					"addODataSelect": false,
-					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
-					"defaultSpan": {
-						"rows": 7,
-						"cols": 2
-					}
+					"entitySet": "ZSZT_TEST_GET_KF_TYPE_COUNTN",
+					"presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#Simple",
+					"chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart",
+					"navigation": "dataPointNav",
+					"dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#counter"
 				}
 			},
 			
