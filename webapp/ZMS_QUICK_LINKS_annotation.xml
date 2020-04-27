@@ -1,0 +1,29 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference Uri="/sap/opu/odata/sap/ZMS_QUICK_LINKS_SRV/$metadata">
+		<edmx:Include Alias="Metadata" Namespace="ZMS_QUICK_LINKS_SRV"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470968/UI.xml?api=v2">
+		<edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+	</edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="Demo2.ZMS_QUICK_LINKS_annotation.ZMS_QUICK_LINKS_SRV">
+			<Annotations Target="Metadata.ZMS_LINKS_SERVICEType">
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Label" Path="name"/>
+							<PropertyValue Property="Value" Path="name"/>
+							<Annotation Term="Common.longtextUrl" Path="link"/>
+						</Record>
+						<Record Type="UI.DataFieldWithUrl">
+							<PropertyValue Property="Url" Path="link"/>
+							<PropertyValue Property="Value" Path="name"/>
+							<PropertyValue Property="Label" Path="name"/>
+						</Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

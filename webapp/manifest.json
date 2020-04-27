@@ -171,7 +171,8 @@
 				"type": "OData",
 				"settings": {
 					"annotations": [
-						"ZMS_QUICK_LINKSAnno0"
+						"ZMS_QUICK_LINKSAnno0",
+						"ZMS_QUICK_LINKS_annotation"
 					],
 					"localUri": "localService/TMS_QUICK_LINKS/metadata.xml"
 				}
@@ -223,6 +224,13 @@
 				"uri": "ZMS_KEY_FIGURE_COUNT2_annotation.xml",
 				"settings": {
 					"localUri": "ZMS_KEY_FIGURE_COUNT2_annotation.xml"
+				}
+			},
+			"ZMS_QUICK_LINKS_annotation": {
+				"type": "ODataAnnotation",
+				"uri": "ZMS_QUICK_LINKS_annotation.xml",
+				"settings": {
+					"localUri": "ZMS_QUICK_LINKS_annotation.xml"
 				}
 			}
 		},
@@ -367,48 +375,18 @@
 			},
 			"card09": {
 				"model": "ZMS_QUICK_LINKS",
-				"template": "sap.ovp.cards.linklist",
+				"template": "sap.ovp.cards.list",
 				"settings": {
 					"title": "{{card09_title}}",
 					"entitySet": "ZMS_LINKS_SERVICE",
+					"listType": "extended",
 					"listFlavor": "standard",
-            		"targetUri": "https://en.wikipedia.org/wiki/Mangalyaan_2",
+					"addODataSelect": false,
+					"annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
 					"defaultSpan": {
-						"rows": 9,
+						"rows": 7,
 						"cols": 1
-					},
-		            "staticContent": [
-		              {
-		                "title": "Attributes",
-		                "targetUri": "https://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;sap-language=EN#PlanningModel-configureAttributes",
-		                "openInNewWindow": true
-		              },
-		              {
-		                "title": "Master Data Types",
-		                "targetUri": "https://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;sap-language=EN#PlanningModel-configureMasterData",
-		                "openInNewWindow": true
-		              },
-		              {
-		                "title": "Time Profiles",
-		                "targetUri": "ttps://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;sap-language=EN#PlanningModel-configureTimeProfile",
-		                "openInNewWindow": true
-		              },
-		              {
-		                "title": "Planning Areas",
-		                "targetUri": "https://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;-language=EN#PlanningModel-configurePlanningArea",
-		                "openInNewWindow": true
-		              },
-		              {
-		                "title": "Sample Model Entities",
-		                "targetUri": "https://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;sap-language=EN#PlanningModel-displaySampleModel",
-		                "openInNewWindow": true
-		              },
-		              {
-		                "title": "Key Figure Calculations",
-		                "targetUri": "https://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;sap-language=EN#PlanningModel-configureKeyFigCalc",
-		                "openInNewWindow": true
-		              }
-		           ]
+					}
 				}
 			},
 			"card02": {
@@ -435,15 +413,12 @@
 				"template": "sap.ovp.cards.charts.analytical",
 				"settings": {
 					"title": "{{card03_title}}",
-					
 					"entitySet": "ZMS_ATTRIBUTE_COUNT",
 					"presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#Simple",
 					"chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart",
-				
 					"navigation": "dataPointNav"
 				}
 			},
-			
 			"card05": {
 				"model": "ZMS_PLANNING_LEVEL",
 				"template": "sap.ovp.cards.table",
@@ -475,7 +450,6 @@
 					"dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#counter"
 				}
 			},
-			
 			"card10": {
 				"model": "ZMS_MADATYPE_COUNT",
 				"template": "sap.ovp.cards.charts.analytical",
