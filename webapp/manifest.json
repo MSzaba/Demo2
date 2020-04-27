@@ -457,6 +457,7 @@
 					"title": "{{card10_title}}",
 					"entitySet": "ZMS_MADATYPE_COUNT",
 					"presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#Simple",
+					"identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#URLTOAPP",
 					"chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart",
 					"navigation": "dataPointNav"
 				}

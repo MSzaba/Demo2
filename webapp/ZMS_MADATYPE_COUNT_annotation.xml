@@ -30,8 +30,14 @@
 						</PropertyValue>
 					</Record>
 				</Annotation>
-				<Annotation Term="UI.Identification">
-					<Collection/>
+				<Annotation Term="UI.Identification" Qualifier="URLTOAPP">
+					<Collection>
+						<Record Type="UI.DataFieldWithUrl">
+							<PropertyValue Property="Url"
+								String="https://pd6-001.wdf.sap.corp/sap/bc/ui2/flp?saml2=disabled&amp;sap-client=001&amp;sap-language=EN#PlanningModel-configureMasterData"/>
+							<PropertyValue Property="Value" String="Key Figure"/>
+						</Record>
+					</Collection>
 				</Annotation>
 				<Annotation Term="UI.Chart">
 					<Record Type="UI.ChartDefinitionType">
