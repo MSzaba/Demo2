@@ -471,6 +471,7 @@
 					"presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#Simple",
 					"chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart",
 					"navigation": "dataPointNav",
+					"identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#URLTOAPP",
 					"dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#counter"
 				}
 			},
